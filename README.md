@@ -103,23 +103,29 @@ LocalSGD \(K=4\).
 
 ### Robustness to Cross-Site Training
 
-The transition from intra-site to cross-site execution has a substantially
-different effect on the three synchronization strategies.
+The comparison between the eight-GPU intra-site and cross-site configurations
+shows different reductions in peak test accuracy across the evaluated
+synchronization strategies.
 
 <p align="center">
   <img src="docs/figures/figB_crosssite_degradation.png" width="760"
-       alt="Accuracy degradation from intra-site to cross-site distributed training">
+       alt="Accuracy difference between intra-site and cross-site distributed training">
 </p>
 
 <p align="center">
   <em>
-  Peak test accuracy degradation when moving from an eight-GPU intra-site
-  configuration to the cross-site WAN configuration.
+  Peak test accuracy difference between the eight-GPU intra-site and cross-site
+  configurations.
   </em>
 </p>
 
-CPDP exhibits the smallest cross-site accuracy degradation at **1.85 percentage
-points**, compared with **3.24 pp** for LocalSGD and **5.10 pp** for DDP.
+CPDP exhibits the smallest observed difference at **1.85 percentage points**,
+compared with **3.24 pp** for LocalSGD and **5.10 pp** for DDP. This comparison
+should not be interpreted as isolating the causal effect of WAN execution alone,
+because the intra-site and cross-site experiments also differ in learning-rate
+and batch-size settings. The values therefore characterize the overall change
+between the evaluated configurations rather than a controlled network-only
+intervention.
 
 ### Communication Behavior
 
