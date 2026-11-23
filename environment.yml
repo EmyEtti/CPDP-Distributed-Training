@@ -1,0 +1,15 @@
+name: cpdp-fgcs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytorch=2.4
+  - torchvision=0.19
+  - pytorch-cuda=11.8
+  - numpy>=1.24,<2
+  - matplotlib>=3.7,<3.10
+  - pip
+# Software environment corresponding to the experimental setup reported in the paper.
+# NCCL is supplied by the PyTorch distribution; verify it using environment_report.py.

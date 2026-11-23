@@ -1,0 +1,6 @@
+method,K,boundaries_per_epoch,per_boundary_seconds,exposed_seconds_per_epoch,compute_floor_seconds
+DDP,1,48,0.83 s,40.0 s,8.9 s
+LocalSGD,2,24,1.66 s,39.9 s,8.9 s
+CPDP,2,24,1.66 s,40.0 s,8.8 s
+LocalSGD,4,12,1.71 s,20.5 s,8.9 s
+CPDP,4,12,1.70 s,20.5 s,9.0 s

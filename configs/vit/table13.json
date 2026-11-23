@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "purpose": "experiment configuration corresponding to the FGCS paper",
+  "experiments": [
+    {
+      "id": "g4_ddp",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g4_localsgd",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g4_cpdp",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g6_ddp",
+      "resources": {
+        "gpus": 6,
+        "nodes": 2,
+        "gpus_per_node": 3,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 384,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g6_localsgd",
+      "resources": {
+        "gpus": 6,
+        "nodes": 2,
+        "gpus_per_node": 3,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 384,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g6_cpdp",
+      "resources": {
+        "gpus": 6,
+        "nodes": 2,
+        "gpus_per_node": 3,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 384,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g8_ddp",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g8_localsgd",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    },
+    {
+      "id": "g8_cpdp",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "vit_s",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 200,
+        "warmup_epochs": 20,
+        "lr": 0.0005,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "AdamW",
+        "weight_decay": 0.05
+      }
+    }
+  ]
+}

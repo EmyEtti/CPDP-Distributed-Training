@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "purpose": "experiment configuration corresponding to the FGCS paper",
+  "experiments": [
+    {
+      "id": "g4_ddp",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g4_localsgd",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g4_cpdp",
+      "resources": {
+        "gpus": 4,
+        "nodes": 1,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 256,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g12_ddp",
+      "resources": {
+        "gpus": 12,
+        "nodes": 3,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 768,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g12_localsgd",
+      "resources": {
+        "gpus": 12,
+        "nodes": 3,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 768,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g12_cpdp",
+      "resources": {
+        "gpus": 12,
+        "nodes": 3,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "tinyimagenet",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 768,
+        "epochs": 100,
+        "warmup_epochs": 10,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    }
+  ]
+}

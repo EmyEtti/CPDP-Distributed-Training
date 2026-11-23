@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper when using this implementation."
+title: "CPDP-FGCS: Controlled Periodic Synchronization for Efficient Data-Parallel Training"
+type: software
+license: MIT
+authors:
+  - family-names: Ettifouri
+    given-names: Imane
+  - family-names: Zbakh
+    given-names: Mostapha
+  - family-names: Tadonki
+    given-names: Claude
+
+preferred-citation:
+  type: article
+  title: "Controlled Periodic Synchronization for Efficient Data-Parallel Training"
+  authors:
+    - family-names: Ettifouri
+      given-names: Imane
+    - family-names: Zbakh
+      given-names: Mostapha
+    - family-names: Tadonki
+      given-names: Claude
+  journal: "Future Generation Computer Systems"
+  notes: "Accepted for publication in Future Generation Computer Systems. DOI and final bibliographic details will be added when available."

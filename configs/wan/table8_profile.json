@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "purpose": "experiment configuration corresponding to the FGCS paper",
+  "experiments": [
+    {
+      "id": "ddp_K1",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy",
+          "Sophia"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 128,
+        "global_batch": 1024,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "localsgd_K2",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy",
+          "Sophia"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 128,
+        "global_batch": 1024,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "localsgd_K4",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy",
+          "Sophia"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 4,
+        "batch_size": 128,
+        "global_batch": 1024,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "cpdp_K2",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy",
+          "Sophia"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 128,
+        "global_batch": 1024,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "cpdp_K4",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy",
+          "Sophia"
+        ]
+      },
+      "seeds": [
+        42,
+        123,
+        777
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 4,
+        "batch_size": 128,
+        "global_batch": 1024,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.1,
+        "slowmo_beta": 0.3,
+        "no_syncbn": true
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    }
+  ],
+  "profiling": {
+    "warmup_iters": 10,
+    "measure_cycles": 25,
+    "wall_repeats": 5
+  }
+}

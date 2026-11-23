@@ -1,0 +1,4 @@
+method,lr_0.4_accuracy_percent,lr_0.2_accuracy_percent,lr_0.2_beta_0.5_accuracy_percent
+DDP,76.94 ± 0.76,77.95 ± 0.12,--
+LocalSGD,66.25 ± 2.06,77.86 ± 0.21,--
+CPDP,72.20 ± 1.77,78.17 ± 0.21,74.31 ± 0.18

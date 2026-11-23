@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "purpose": "experiment configuration corresponding to the FGCS paper",
+  "experiments": [
+    {
+      "id": "g8_ddp",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "ddp",
+        "sync_period": 1,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K2",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K4",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 4,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K8",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 8,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K16",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 16,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K32",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 32,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_cpdp_K64",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "cpdp",
+        "sync_period": 64,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K2",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 2,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K4",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 4,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K8",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 8,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K16",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 16,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K32",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 32,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    },
+    {
+      "id": "g8_localsgd_K64",
+      "resources": {
+        "gpus": 8,
+        "nodes": 2,
+        "gpus_per_node": 4,
+        "sites": [
+          "Nancy"
+        ]
+      },
+      "seeds": [
+        42
+      ],
+      "training": {
+        "model": "resnet50",
+        "dataset": "cifar100",
+        "method": "localsgd",
+        "sync_period": 64,
+        "batch_size": 64,
+        "global_batch": 512,
+        "epochs": 100,
+        "warmup_epochs": 5,
+        "lr": 0.2,
+        "slowmo_beta": 0.3,
+        "no_syncbn": false
+      },
+      "optimizer": {
+        "name": "SGD",
+        "weight_decay": 0.0005,
+        "momentum": 0.9
+      }
+    }
+  ]
+}

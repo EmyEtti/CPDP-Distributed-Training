@@ -1,0 +1,9 @@
+scale,method,exposed_seconds_per_epoch,compute_floor_seconds
+g4,DDP (K=1),3.2 s,6.7 s
+g4,CPDP (K=2),4.2 s,6.6 s
+g8,DDP (K=1),9.8 s,7.6 s
+g8,CPDP (K=2),9.9 s,7.6 s
+g12,DDP (K=1),9.6 s,8.6 s
+g12,CPDP (K=2),10.0 s,8.6 s
+g16,DDP (K=1),7.4 s,9.0 s
+g16,CPDP (K=2),7.7 s,9.0 s
